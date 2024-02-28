@@ -43,6 +43,7 @@ namespace Villa.WebUI.Controllers
             await _dealService.TCreateAsync(newValue);
             return RedirectToAction("Index");
         }
+
         public async Task<IActionResult> UpdateDeal(ObjectId id)
         {
             var value = await _dealService.TGetByIdAsync(id);
@@ -51,7 +52,7 @@ namespace Villa.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateCounter(UpdateDealDto updateDealDto)
+        public async Task<IActionResult> UpdateDeal(UpdateDealDto updateDealDto)
         {
             var updateValue = _mapper.Map<Deal>(updateDealDto);
             await _dealService.TUpdateAsync(updateValue);

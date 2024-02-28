@@ -7,7 +7,7 @@ using Villa.Entity.Entities;
 
 namespace Villa.Business.Abstract
 {
-    public interface IMesssageService:IGenericService<Message>
+    public interface IMessageService:IGenericService<Message>
     {
     }
 }

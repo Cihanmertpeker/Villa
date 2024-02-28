@@ -36,8 +36,8 @@ namespace Villa.WebUI.Mapping
             CreateMap<CreateFeatureDto, Feature>().ReverseMap();
 
             CreateMap<ResultMessageDto, Message>().ReverseMap();
-            CreateMap<UpdateMessageDto, Feature>().ReverseMap();
-            CreateMap<CreateMessageDto, Feature>().ReverseMap();
+            CreateMap<UpdateMessageDto, Message>().ReverseMap();
+            CreateMap<CreateMessageDto, Message>().ReverseMap();
 
             CreateMap<ResultProductDto, Product>().ReverseMap();
             CreateMap<UpdateProductDto, Product>().ReverseMap();

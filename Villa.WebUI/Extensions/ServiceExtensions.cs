@@ -26,7 +26,7 @@ namespace Villa.WebUI.Extensions
                 Services.AddScoped<IFeatureService, FeatureManager>();
 
                 Services.AddScoped<IMessageDal, EfMessageDal>();
-                Services.AddScoped<IMesssageService, MessageManager>();
+                Services.AddScoped<IMessageService, MessageManager>();
 
                 Services.AddScoped<IProductDal, EfProductDal>();
                 Services.AddScoped<IProductService, ProductManager>();
