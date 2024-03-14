@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using MongoDB.Bson;
 using MongoDB.EntityFrameworkCore.Extensions;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ using Villa.Entity.Entities;
 
 namespace Villa.DataAccess.Context
 {
-    public class VillaContext:DbContext
+    public class VillaContext:IdentityDbContext<AppUser,AppRole,ObjectId>
     {
         public VillaContext(DbContextOptions options):base(options)
         {
@@ -26,6 +28,9 @@ namespace Villa.DataAccess.Context
         public DbSet<Quest> Quests { get; set; }
         public DbSet<Video> Videos { get; set; }
         public DbSet<SubHeader> SubHeaders { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<AppRole> AppRoles { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
