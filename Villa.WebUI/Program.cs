@@ -26,7 +26,9 @@ builder.Services.AddDbContext<VillaContext>(option =>
 
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<VillaContext>();
 
+
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
 builder.Services.AddControllersWithViews();
 
 

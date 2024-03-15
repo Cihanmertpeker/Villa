@@ -27,23 +27,22 @@ namespace Villa.DataAccess.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Quest> Quests { get; set; }
         public DbSet<Video> Videos { get; set; }
-        public DbSet<SubHeader> SubHeaders { get; set; }
-        public DbSet<AppUser> AppUsers { get; set; }
-        public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<SubHeader> SubHeaders { get; set; }   
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Banner>().ToCollection("Banners");
-            modelBuilder.Entity<Contact>().ToCollection("Contacts");
-            modelBuilder.Entity<Counter>().ToCollection("Counters");
-            modelBuilder.Entity<Deal>().ToCollection("Deals");
-            modelBuilder.Entity<Feature>().ToCollection("Features");
-            modelBuilder.Entity<Message>().ToCollection("Messages");
-            modelBuilder.Entity<Product>().ToCollection("Products");
-            modelBuilder.Entity<Quest>().ToCollection("Quests");
-            modelBuilder.Entity<Video>().ToCollection("Videos");
-            modelBuilder.Entity<SubHeader>().ToCollection("SubHeaders");
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<Banner>().ToCollection("Banners");
+            //modelBuilder.Entity<Contact>().ToCollection("Contacts");
+            //modelBuilder.Entity<Counter>().ToCollection("Counters");
+            //modelBuilder.Entity<Deal>().ToCollection("Deals");
+            //modelBuilder.Entity<Feature>().ToCollection("Features");
+            //modelBuilder.Entity<Message>().ToCollection("Messages");
+            //modelBuilder.Entity<Product>().ToCollection("Products");
+            //modelBuilder.Entity<Quest>().ToCollection("Quests");
+            //modelBuilder.Entity<Video>().ToCollection("Videos");
+            //modelBuilder.Entity<SubHeader>().ToCollection("SubHeaders");
         }
 
     }
